@@ -81,7 +81,7 @@ class ProductPricesUpdateWizard(models.TransientModel):
             'view_mode': 'tree,form',
             'domain': [('id', 'in', product_ids)],
             'target': 'current',
-            'nodestroy': True,
+            "context": {"nodestroy": True},
         }
 
     @api.model
